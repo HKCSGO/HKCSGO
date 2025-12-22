@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/x-icon" href="HKCSGO.png">
+      <title>HKCSGO</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <header class="top-nav">
+         <div class="nav-left">
+            <h1 class="site-title">HKCSGO</h1>
+         </div>
+         <div class="nav-right">
+            <a href="https://discord.gg/kEX255SWJr" target="_blank" class="nav-link">Discord</a>
+            <a href="https://hkcsgo.mysellauth.com" class="shop-button">Store</a>
+         </div>
+      </header>
+      <main>
+         <img class="main-logo" src="HKCSGO-Transparent.png" alt="HKCSGO Logo" />
+         <p class="title-format">
+            Welcome to <span class="typing-text">HKCSGO</span>
+         </p>
+         <p class="description">
+            The golden standard for cheat configs and premium options.
+         </p>
+         <p class="description">
+            We offer configs for MemeSense, Iniuria, Fatality.
+         </p>
+      </main>
+      <section class="info-icons">
+         <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">
+            <h3>Premium Quality</h3>
+            <p>Tested daily to ensure user safety.</p>
+         </div>
+         <div class="icon-box">
+            <img src="CheatStrike.png">
+            <h3>Frequent Updates</h3>
+            <p>Updated regularly to stay ahead of the game.</p>
+         </div>
+         <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png">
+            <h3>Fast Support</h3>
+            <p>Fast responses via Discord and email.</p>
+         </div>
+         <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png">
+            <h3>Secure Payments</h3>
+            <p>Safe checkout through trusted platforms.</p>
+         </div>
+      </section>
+      <!-- YOUTUBE SHOWCASE -->
+      <section class="video-section">
+         <h2 class="center-text-container">Preview Our Work</h2>
+         <div class="video-wrapper">
+            <iframe 
+               src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
+               title="HKCSGO Preview"
+               frameborder="0"
+               allowfullscreen>
+            </iframe>
+         </div>
+      </section>
+      <div class="center-text-container">
+         <p>Stay tuned for updates, features, and more coming soon.</p>
+      </div>
+      <footer class="site-footer">
+         <div class="footer-container">
+            <div class="footer-column description">
+               <h4>HKCSGO</h4>
+               <p>
+                  We sell cheats and cheat configs for any game. Focusing on quality and reliability.
+               </p>
+            </div>
+            <div class="footer-column">
+               <h4>Contact</h4>
+               <ul>
+                  <li><a href="https://discord.gg/kEX255SWJr" target="_blank">Discord</a></li>
+                  <li><a href="mailto:support@hkcsgo.win">support@hkcsgo.win</a></li>
+               </ul>
+            </div>
+            <div class="footer-column">
+               <h4>Legal</h4>
+               <ul>
+                  <li><a href="https://hkcsgo.mysellauth.com/terms-of-service">Terms of Service</a></li>
+                  <li><a href="https://hkcsgo.mysellauth.com/privacy-policy">Privacy Policy</a></li>
+                  <li><a href="https://hkcsgo.mysellauth.com/refund-policy">Refund Policy</a></li>
+               </ul>
+            </div>
+            <div class="footer-column">
+               <h4>Products</h4>
+               <ul>
+                  <li>CS2 Cheats</li>
+                  <li>MemeSense Configs</li>
+                  <li>Custom Orders</li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            © 2025 HKCSGO — All rights reserved.
+         </div>
+      </footer>
+      <script>
+         const text = "HKCSGO";
+         const typingSpeed = 120;
+         const deletingSpeed = 175;
+         const delayBetween = 1200;
+         
+         const el = document.querySelector(".typing-text");
+         let index = 0;
+         let isDeleting = false;
+         
+         function typeLoop() {
+           if (!isDeleting) {
+             el.textContent = text.slice(0, index + 1);
+             index++;
+         
+             if (index === text.length) {
+               setTimeout(() => isDeleting = true, delayBetween);
+             }
+           } else {
+             el.textContent = text.slice(0, index - 1);
+             index--;
+         
+             if (index === 0) {
+               isDeleting = false;
+             }
+           }
+         
+           setTimeout(typeLoop, isDeleting ? deletingSpeed : typingSpeed);
+         }
+         
+         typeLoop();
+      </script>
+   </body>
+</html>
